@@ -6,6 +6,49 @@
 
 const VoltinAnimations = (() => {
 
+  function initStatCounters() {
+    const statNumbers = document.querySelectorAll('.stat__number');
+    if (!statNumbers.length) return;
+
+    function animateCounter(el) {
+      const text = el.textContent;
+      const match = text.match(/^(\d+)([+%]?)$/);
+      if (!match) return;
+
+      const target = parseInt(match[1], 10);
+      const suffix = match[2] || '';
+      const duration = 1800;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(target * eased);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      el.textContent = '0' + suffix;
+      requestAnimationFrame(update);
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach((el) => observer.observe(el));
+  }
+
   function initScrollReveal() {
     const elements = document.querySelectorAll('.reveal');
 
@@ -54,6 +97,7 @@ const VoltinAnimations = (() => {
   }
 
   function init() {
+    initStatCounters();
     initScrollReveal();
     initHeaderShadow();
     initSmoothScroll();
