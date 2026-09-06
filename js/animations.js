@@ -96,11 +96,25 @@ const VoltinAnimations = (() => {
     });
   }
 
+  function initGoogleCarousel() {
+    document.querySelectorAll('.g-carousel-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const scroller = document.getElementById(btn.dataset.target);
+        if (!scroller) return;
+        const card = scroller.querySelector('.g-card');
+        if (!card) return;
+        const step = card.offsetWidth + 20;
+        scroller.scrollBy({ left: parseInt(btn.dataset.dir, 10) * step, behavior: 'smooth' });
+      });
+    });
+  }
+
   function init() {
     initStatCounters();
     initScrollReveal();
     initHeaderShadow();
     initSmoothScroll();
+    initGoogleCarousel();
   }
 
   return { init };
