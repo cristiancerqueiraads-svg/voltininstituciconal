@@ -615,8 +615,8 @@ h1, h2, h3, h4 {
 }
 
 .feature {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 32px 28px;
   transition: all 0.25s ease;
@@ -625,7 +625,7 @@ h1, h2, h3, h4 {
 
 .feature:hover {
   transform: translateY(-4px);
-  border-color: var(--green-medium);
+  border-color: rgba(242, 104, 15, 0.5);
   box-shadow: var(--shadow);
 }
 
@@ -636,8 +636,8 @@ h1, h2, h3, h4 {
   width: 52px;
   height: 52px;
   border-radius: var(--radius-sm);
-  background: var(--green-light);
-  color: var(--green-medium);
+  background: rgba(242, 104, 15, 0.14);
+  color: var(--orange);
   margin-bottom: 16px;
 }
 
@@ -646,10 +646,10 @@ h1, h2, h3, h4 {
 .feature h3 {
   font-size: 1.15rem;
   margin-bottom: 8px;
-  color: var(--navy);
+  color: #fff;
 }
 
-.feature p { color: var(--text-secondary); font-size: 0.95rem; }
+.feature p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
 
 /* ---------- Passos ---------- */
 .steps__grid {
@@ -864,8 +864,8 @@ h1, h2, h3, h4 {
 }
 
 .faq__item {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
   overflow: hidden;
   transition: border-color 0.25s ease;
