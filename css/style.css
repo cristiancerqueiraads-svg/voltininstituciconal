@@ -374,6 +374,39 @@ h1, h2, h3, h4 {
 .section--orange h3 { color: #fff; }
 .section--orange .section__subtitle { color: rgba(255, 255, 255, 0.85); }
 
+/* Seções verdes com degrade + marca d'água da logo */
+.section--gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--gradient--left {
+  background: radial-gradient(900px 600px at 12% -10%, #10502F 0%, var(--green-dark) 65%);
+}
+
+.section--gradient--right {
+  background: radial-gradient(900px 600px at 88% -10%, #10502F 0%, var(--green-dark) 65%);
+}
+
+.section--gradient::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 460px;
+  height: 460px;
+  background: url('../img/logolaranjafundotransparente.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--gradient--left::before { left: -140px; }
+.section--gradient--right::before { right: -140px; }
+
+.section--gradient .container { position: relative; z-index: 1; }
+
 .section__label {
   display: inline-flex;
   align-items: center;
