@@ -524,6 +524,8 @@ h1, h2, h3, h4 {
 }
 
 .service-card {
+  position: relative;
+  overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -534,6 +536,18 @@ h1, h2, h3, h4 {
   transition: all 0.25s ease;
   cursor: pointer;
 }
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--orange);
+}
+
+.service-card--green::before { background: var(--green-medium); }
 
 .service-card:hover {
   transform: translateY(-6px);
@@ -559,7 +573,14 @@ h1, h2, h3, h4 {
   color: var(--navy);
 }
 
-.service-card__desc { color: var(--text-secondary); font-size: 1rem; }
+.service-card p { color: var(--text-secondary); font-size: 1rem; }
+
+.service-card__desc { font-size: 1rem; }
+
+.service-card--green .service-card__icon {
+  background: rgba(0, 107, 58, 0.1);
+  color: var(--green-medium);
+}
 
 .service-card__list {
   list-style: none;
