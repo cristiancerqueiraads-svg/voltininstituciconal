@@ -888,7 +888,7 @@ h1, h2, h3, h4 {
   font-size: 1.05rem;
   text-align: left;
   cursor: pointer;
-  color: var(--navy);
+  color: #fff;
 }
 
 .faq__chevron {
@@ -911,7 +911,7 @@ h1, h2, h3, h4 {
 
 .faq__answer p {
   padding: 0 24px 22px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.95rem;
   line-height: 1.7;
 }
