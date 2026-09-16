@@ -919,7 +919,7 @@ h1, h2, h3, h4 {
 /* ---------- CTA Final ---------- */
 .final-cta {
   padding: 100px 0;
-  background: var(--bg);
+  background: var(--orange);
   text-align: center;
 }
 
@@ -938,13 +938,23 @@ h1, h2, h3, h4 {
 }
 
 .final-cta p {
-  color: var(--text-secondary);
+  color: rgba(12, 36, 52, 0.85);
   max-width: 560px;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-.final-cta small { color: var(--text-muted); font-size: 0.9rem; }
+.final-cta small { color: rgba(12, 36, 52, 0.7); font-size: 0.9rem; }
+
+.final-cta .btn--whatsapp {
+  background: var(--green-dark);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.final-cta .btn--whatsapp:hover {
+  background: var(--green-medium);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
 
 /* ---------- Footer ---------- */
 .footer {
@@ -967,7 +977,7 @@ h1, h2, h3, h4 {
 .footer h4 {
   font-size: 1.1rem;
   margin-bottom: 14px;
-  color: #fff;
+  color: var(--orange);
   font-family: var(--font-title);
   font-weight: 700;
 }
