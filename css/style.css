@@ -397,7 +397,7 @@ h1, h2, h3, h4 {
   height: 460px;
   background: url('../img/logolaranjafundotransparente.png') no-repeat center center;
   background-size: contain;
-  opacity: 0.10;
+  opacity: 0.22;
   pointer-events: none;
   z-index: 0;
 }
@@ -419,7 +419,7 @@ h1, h2, h3, h4 {
   height: 460px;
   background: url('../img/logolaranjafundotransparente.png') no-repeat center center;
   background-size: contain;
-  opacity: 0.10;
+  opacity: 0.16;
   pointer-events: none;
   z-index: 0;
 }
