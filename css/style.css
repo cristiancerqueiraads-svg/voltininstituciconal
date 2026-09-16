@@ -132,6 +132,16 @@ h1, h2, h3, h4 {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
+.hero .btn--primary {
+  background: var(--orange);
+  box-shadow: 0 4px 16px rgba(242, 104, 15, 0.35);
+}
+
+.hero .btn--primary:hover {
+  background: var(--orange-hover);
+  box-shadow: 0 6px 20px rgba(242, 104, 15, 0.45);
+}
+
 .btn--outline:hover {
   background: #fff;
   color: var(--navy);
