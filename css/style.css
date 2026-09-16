@@ -381,11 +381,11 @@ h1, h2, h3, h4 {
 }
 
 .section--gradient--left {
-  background: radial-gradient(900px 600px at 12% -10%, #10502F 0%, var(--green-dark) 65%);
+  background: linear-gradient(180deg, #0F5F36 0%, #0B4527 100%);
 }
 
 .section--gradient--right {
-  background: radial-gradient(900px 600px at 88% -10%, #10502F 0%, var(--green-dark) 65%);
+  background: linear-gradient(180deg, #0B4527 0%, #0A3A22 100%);
 }
 
 .section--gradient::before {
