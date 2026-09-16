@@ -14,15 +14,18 @@
   --bg-warm: #f9f7f2;
 
   /* Verde VOLTIN */
-  --green-dark: #1A3C2F;
-  --green-medium: #2D5A48;
+  --green-dark: #0A2A20;
+  --green-medium: #006B3A;
   --green-light: #E8F0EC;
 
   /* Laranja VOLTIN */
-  --orange: #F26419;
-  --orange-hover: #E85D04;
-  --orange-soft: rgba(242, 100, 25, 0.08);
+  --orange: #F2680F;
+  --orange-hover: #D95B0B;
+  --orange-soft: rgba(242, 104, 15, 0.08);
   --orange-bg: #FFF0E6;
+
+  /* Navy VOLTIN */
+  --navy: #0C2434;
 
   /* Texto */
   --text: #1A1A1A;
@@ -67,7 +70,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-title);
   line-height: 1.15;
   font-weight: 700;
-  color: #000;
+  color: var(--navy);
 }
 
 .container {
@@ -114,18 +117,18 @@ h1, h2, h3, h4 {
 .btn--primary {
   background: var(--green-dark);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(26, 60, 47, 0.2);
+  box-shadow: 0 4px 16px rgba(10, 42, 32, 0.2);
 }
 
 .btn--primary:hover {
   background: var(--green-medium);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(26, 60, 47, 0.3);
+  box-shadow: 0 6px 20px rgba(10, 42, 32, 0.3);
 }
 
 .btn--outline {
   background: transparent;
-  color: #000;
+  color: var(--navy);
   border-color: var(--green-dark);
 }
 
@@ -266,7 +269,7 @@ h1, h2, h3, h4 {
   font-size: clamp(2.2rem, 5.5vw, 3.8rem);
   font-weight: 800;
   max-width: 600px;
-  color: #000;
+  color: var(--navy);
 }
 
 .hero__subtitle {
@@ -384,7 +387,7 @@ h1, h2, h3, h4 {
 .section__title {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 800;
-  color: #000;
+  color: var(--navy);
 }
 
 .section__title--light {
@@ -417,7 +420,7 @@ h1, h2, h3, h4 {
 .idea__title {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: #000;
+  color: var(--navy);
   line-height: 1.1;
 }
 
@@ -496,7 +499,7 @@ h1, h2, h3, h4 {
 .pain-card h3 {
   font-size: 1.15rem;
   margin-bottom: 8px;
-  color: #000;
+  color: var(--navy);
 }
 
 .pain-card p { color: var(--text-secondary); font-size: 0.95rem; }
@@ -553,7 +556,7 @@ h1, h2, h3, h4 {
 
 .service-card h3 {
   font-size: 1.5rem;
-  color: #000;
+  color: var(--navy);
 }
 
 .service-card__desc { color: var(--text-secondary); font-size: 1rem; }
@@ -622,7 +625,7 @@ h1, h2, h3, h4 {
 .feature h3 {
   font-size: 1.15rem;
   margin-bottom: 8px;
-  color: #000;
+  color: var(--navy);
 }
 
 .feature p { color: var(--text-secondary); font-size: 0.95rem; }
@@ -685,7 +688,7 @@ h1, h2, h3, h4 {
 .step h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #000;
+  color: var(--navy);
 }
 
 .step p { color: var(--text-secondary); font-size: 0.95rem; }
@@ -763,7 +766,7 @@ h1, h2, h3, h4 {
 .g-card__name {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #000;
+  color: var(--navy);
   font-family: var(--font-title);
 }
 
@@ -864,7 +867,7 @@ h1, h2, h3, h4 {
   font-size: 1.05rem;
   text-align: left;
   cursor: pointer;
-  color: #000;
+  color: var(--navy);
 }
 
 .faq__chevron {
@@ -910,7 +913,7 @@ h1, h2, h3, h4 {
   font-size: clamp(1.8rem, 4.5vw, 2.8rem);
   font-weight: 800;
   max-width: 600px;
-  color: #000;
+  color: var(--navy);
 }
 
 .final-cta p {
